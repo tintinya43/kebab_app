@@ -1,15 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* universal */
-
-$gray-medium-light: #eaeaea;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
   box-sizing:         border-box;
 }
+
+/* universal */
 
 body {
   padding-top: 60px;
@@ -108,6 +107,17 @@ footer ul li {
   margin-left: 15px;
 }
 
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+
 /* sidebar */
 
 aside {
@@ -158,16 +168,6 @@ input {
   height: auto !important;
 }
 
-/* miscellaneous */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
-
 #error_explanation {
   color: red;
   ul {
@@ -183,6 +183,7 @@ input {
   }
 }
 
+
 .checkbox {
   margin-top: -10px;
   margin-bottom: 10px;
@@ -197,6 +198,7 @@ input {
   margin-left: 0;
 }
 
+
 /* Users index */
 
 .users {
@@ -206,5 +208,52 @@ input {
     overflow: auto;
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+/* microposts */
+
+.microposts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
   }
 }
