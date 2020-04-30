@@ -1,0 +1,19 @@
+current directory: /home/ec2-user/environment/kebab/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.11/ext/mri
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/bin/ruby -I /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200430-5468-1tn5uqo.rb extconf.rb
+creating Makefile
+
+current directory: /home/ec2-user/environment/kebab/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" clean
+
+current directory: /home/ec2-user/environment/kebab/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.so
+
+current directory: /home/ec2-user/environment/kebab/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20200430-5468-1gtg3ys
