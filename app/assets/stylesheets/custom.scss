@@ -1,17 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
-@mixin box_sizing {
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
-}
-
-/* universal */
+  
 
 body {
   padding-top: 60px;
+  background-image: image-url("kebab.jpg")
 }
 
 section {
@@ -38,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
-  letter-spacing: -2px;
+  letter-spacing: -2px; 
   margin-bottom: 30px;
   text-align: center;
 }
@@ -63,7 +57,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  color: #006400;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -71,7 +65,7 @@ p {
 }
 
 #logo:hover {
-  color: #fff;
+  color: #006400;
   text-decoration: none;
 }
 
@@ -107,15 +101,6 @@ footer ul li {
   margin-left: 15px;
 }
 
-/* miscellaneous */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
 
 
 /* sidebar */
@@ -199,7 +184,6 @@ input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
-  @include box_sizing;
 }
 
 input {
