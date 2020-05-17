@@ -1,5 +1,5 @@
 current directory: /home/ec2-user/environment/kebab/vendor/bundle/ruby/2.6.0/gems/json-1.8.6/ext/json
-/home/ec2-user/.rvm/rubies/ruby-2.6.3/bin/ruby -I /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200430-5468-z5fkog.rb extconf.rb
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/bin/ruby -I /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200517-18993-kgk8hm.rb extconf.rb
 creating Makefile
 
 current directory: /home/ec2-user/environment/kebab/vendor/bundle/ruby/2.6.0/gems/json-1.8.6/ext/json
