@@ -1,281 +1,440 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+$color-main: #148B9E;
+$color-back: #DAE6E2;
+$height: 42.5rem;
   
 
 body {
-  padding-top: 60px;
-  background-image: image-url("kebab.jpg")
+ /* 背景色 */
+ background-color:#FFEEEE;
+ 
+ /* 上からの空白 */
+ padding-top: 100px;
 }
 
 section {
-  overflow: auto;
+ overflow: auto;
 }
 
 textarea {
-  resize: vertical;
-}
-
-.center {
-  text-align: center;
-}
-
-.center h1 {
-  margin-bottom: 10px;
+ resize: vertical;
 }
 
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+ /* 行の高さ */
+ line-height: 1;
 }
 
 h1 {
-  font-size: 3em;
-  letter-spacing: -2px; 
-  margin-bottom: 30px;
-  text-align: center;
+ font-size: 3em;
+ letter-spacing: -2px;
+ margin-bottom: 30px;
+ text-align: center;
 }
 
 h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: #777;
+ font-size: 1.2em;
+ letter-spacing: -1px;
+ margin-bottom: 30px;
+ text-align: center;
+ font-weight: normal;
+ color: $gray-light;
 }
 
 p {
-  font-size: 1.1em;
-  line-height: 1.7em;
+ font-size: 1.1em;
+ line-height: 1.7em;
 }
+
+/* home中央文字 */
+.center {
+ /* 相対位置 */
+ position: relative;
+
+ /* 文字の種類 */
+ font-family: "游明朝";
+
+ /* テキスト変換 */
+ text-transform: uppercase;
+
+ /* 文字の色 */
+ color: #EEEEEE;
+
+ /* 中央揃え */
+ text-align: center;
+
+ /* タイトル */
+ h1
+ {
+
+   /* 文字の幅 */
+   letter-spacing: 5px;
+
+   /* 透明度 */
+   opacity: 0.8;
+   
+   /* 絶対位置 */
+   position: absolute;
+
+   /* 位置 */
+   top: 20%;
+   left: 50%;
+
+   /* X方向、Y方向にどれだけずらすか */
+   -ms-transform: translate(-50%,-50%);
+   -webkit-transform: translate(-50%,-50%);
+   transform: translate(-50%,-50%);
+
+   /* 改行させない */
+   white-space: nowrap;
+
+ }
+ 
+ /* サブタイトル */
+ h2{
+   /* 文字の色 */
+   color: #AAAAAA;
+
+   /* 文字の幅 */
+   letter-spacing: 5px;
+
+   /* 透明度 */
+   opacity: 0.9;
+
+   /* 絶対位置 */
+   position: absolute;
+
+   /* 上からの位置 */
+   top: 70%;
+
+   /* 左からの位置 */
+   left: 50%;
+
+   /* X方向、Y方向にどれだけずらすか */
+   -ms-transform: translate(-50%,-50%);
+   -webkit-transform: translate(-50%,-50%);
+   transform: translate(-50%,-50%);
+
+ }
+
+ img{
+   /* 背景のサイズ */
+   width: 100%;
+ }
+
+ /* サインアップボタン */
+ .signup{
+   /* 絶対位置 */
+   position: absolute;
+
+   /* 上からの位置 */
+   top: 90%;
+   
+   /* 左からの位置 */
+   left: 50%;
+   
+   /* X方向、Y方向にどれだけずらすか */
+   -ms-transform: translate(-50%,-50%);
+   -webkit-transform: translate(-50%,-50%);
+   transform: translate(-50%,-50%);
+ }
+}
+
+/* 画面が小さいとき */
+@media(max-width:1000px){
+ /* home中央文字 */
+ .center {
+   
+   /* タイトル */
+   h1 {
+     /* 文字サイズ */
+     font-size: 1.5em;
+   }
+   
+   /* サブタイトル */
+   h2 {
+     /* 文字サイズ */
+     font-size: 0.6em;
+   }
+   
+   /* 新規登録ボタン */
+   .signup{
+     /* 文字サイズ */
+     font-size: 1em;
+     
+     /* 内側空白 */
+     padding:3px;
+   }
+ }
+}
+
 
 /* header */
+header{
+ /* 文字の種類 */
+ font-family: "游ゴシック";
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: #006400;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
+ /* ロゴの文字列に対するCSSです */
+ #logo {
+   /* 寄せ方 */
+   float: left;
+   
+   /* 線の外側の右側の余白 */
+   margin-right: 20px;
+   
+   /*線の内側の上側の余白  */
+   padding-top: 10px;
+   
+   /* フォントの大きさ */
+   font-size: 1.6em;
+   
+   /* 文字色 */
+   color: #444444;
+ 
+   /* テキスト変換 */
+   text-transform: lowercase;
+   
+   /* 文字の幅 */
+   letter-spacing: 5px;
+   
+   /* 文字の太さ */
+   font-weight: normal;
+
+   /* マウスカーソルを乗せたときのスタイル */
+   &:hover {
+     color: #AAAAAA;
+     text-decoration: none;
+   }
+ }
 }
-
-#logo:hover {
-  color: #006400;
-  text-decoration: none;
-}
-
 
 /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
-}
+ /* 文字の種類 */
+ font-family: "游ゴシック";
 
-footer a {
-  color: #555;
-}
+ /* 線の外の上からの空白 */
+ margin-top: 45px;
 
-footer a:hover {
-  color: #222;
-}
+ /* 線の中の上からの空白 */
+ padding-top: 5px;
 
-footer small {
-  float: left;
-}
+ /* 線 */
+ border-top: 1px solid #AAAAAA;
 
-footer ul {
-  float: right;
-  list-style: none;
-}
+ /* 文字色 */
+ color: $gray-light;
 
-footer ul li {
-  float: left;
-  margin-left: 15px;
-}
+ /* リンク */
+ a {
+   /* 文字色 */
+   color: $gray;
+   
+   /* マウスを乗せたら */
+   &:hover {
+     /* 文字色 */
+     color: $gray-darker;
+   }
+ }
 
+ /* 左下 */
+ small {
+   /* 左寄せ */
+   float: left;
+ }
+ 
+ /* 右下 */
+ ul {
+   /* 右寄せ */
+   float: right;
+
+   /* 黒点なし */
+   list-style: none;
+
+   li {
+     /* 左寄せ */
+     float: left;
+     
+     /* 間隔 */
+     margin-left: 30px;
+   }
+ }
+}
 
 
 /* sidebar */
 
 aside {
-  section.user_info {
-    margin-top: 20px;
-  }
-  section {
-    padding: 10px 0;
-    margin-top: 20px;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-    }
-  }
+ section.user_info {
+   margin-top: 20px;
+ }
+ section {
+   padding: 10px 0;
+   margin-top: 20px;
+   &:first-child {
+     border: 0;
+     padding-top: 0;
+   }
+   span {
+     display: block;
+     margin-bottom: 3px;
+     line-height: 1;
+   }
+   h1 {
+     font-size: 1.4em;
+     text-align: left;
+     letter-spacing: -1px;
+     margin-bottom: 3px;
+     margin-top: 0px;
+   }
+ }
 }
 
 .gravatar {
-  float: left;
-  margin-right: 10px;
+ float: left;
+ margin-right: 10px;
 }
 
 .gravatar_edit {
-  margin-top: 15px;
+ margin-top: 15px;
 }
 
 .stats {
-  overflow: auto;
-  margin-top: 0;
-  padding: 0;
-  a {
-    float: left;
-    padding: 0 10px;
-    border-left: 1px solid $gray-lighter;
-    color: gray;
-    &:first-child {
-      padding-left: 0;
-      border: 0;
-    }
-    &:hover {
-      text-decoration: none;
-      color: blue;
-    }
-  }
-  strong {
-    display: block;
-  }
+ overflow: auto;
+ margin-top: 0;
+ padding: 0;
+ a {
+   float: left;
+   padding: 0 10px;
+   border-left: 1px solid $gray-lighter;
+   color: gray;
+   &:first-child {
+     padding-left: 0;
+     border: 0;
+   }
+   &:hover {
+     text-decoration: none;
+     color: blue;
+   }
+ }
+ strong {
+   display: block;
+ }
 }
 
 .user_avatars {
-  overflow: auto;
-  margin-top: 10px;
-  .gravatar {
-    margin: 1px 1px;
-  }
-  a {
-    padding: 0;
-  }
+ overflow: auto;
+ margin-top: 10px;
+ .gravatar {
+   margin: 1px 1px;
+ }
+ a {
+   padding: 0;
+ }
 }
 
 .users.follow {
-  padding: 0;
+ padding: 0;
 }
 
 /* forms */
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
+ border: 1px solid #bbb;
+ width: 100%;
+ margin-bottom: 15px;
 }
 
 input {
-  height: auto !important;
+ height: auto !important;
 }
-
-#error_explanation {
-  color: red;
-  ul {
-    color: red;
-    margin: 0 0 30px 0;
-  }
+ #error_explanation {
+ color: red;
+ ul {
+   color: red;
+   margin: 0 0 30px 0;
+ }
 }
 
 .field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
-  }
+ @extend .has-error;
+ .form-control {
+   color: $state-danger-text;
+ }
 }
-
 
 .checkbox {
-  margin-top: -10px;
-  margin-bottom: 10px;
-  span {
-    margin-left: 20px;
-    font-weight: normal;
-  }
+ margin-top: -10px;
+ margin-bottom: 10px;
+ span {
+   margin-left: 20px;
+   font-weight: normal;
+ }
 }
-
-#session_remember_me {
-  width: auto;
-  margin-left: 0;
+ #session_remember_me {
+ width: auto;
+ margin-left: 0;
 }
-
 
 /* Users index */
 
 .users {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
-  }
+ list-style: none;
+ margin: 0;
+ li {
+   overflow: auto;
+   padding: 10px 0;
+   border-bottom: 1px solid $gray-lighter;
+ }
 }
 
 /* microposts */
 
 .microposts {
-  list-style: none;
-  padding: 0;
-  li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
-  }
-  .user {
-    margin-top: 5em;
-    padding-top: 0;
-  }
-  .content {
-    display: block;
-    margin-left: 60px;
-    img {
-      display: block;
-      padding: 5px 0;
-    }
-  }
-  .timestamp {
-    color: $gray-light;
-    display: block;
-    margin-left: 60px;
-  }
-  .gravatar {
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
-  }
+ list-style: none;
+ padding: 0;
+ li {
+   padding: 10px 0;
+   border-top: 1px solid #e8e8e8;
+ }
+ .user {
+   margin-top: 5em;
+   padding-top: 0;
+ }
+ .content {
+   display: block;
+   margin-left: 60px;
+   img {
+     display: block;
+     padding: 5px 0;
+   }
+ }
+ .timestamp {
+   color: $gray-light;
+   display: block;
+   margin-left: 60px;
+ }
+ .gravatar {
+   float: left;
+   margin-right: 10px;
+   margin-top: 5px;
+ }
 }
 
 aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
-  }
+ textarea {
+   height: 100px;
+   margin-bottom: 5px;
+ }
 }
 
 span.picture {
-  margin-top: 10px;
-  input {
-    border: 0;
-  }
+ margin-top: 10px;
+ input {
+   border: 0;
+ }
 }
