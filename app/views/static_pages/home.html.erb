@@ -19,12 +19,11 @@
   </div>
   
 <% else %>
-
-<div class="center">
-  <%= image_tag("kebab.jpg", alt: "kebab") %>
-  <h1>"かぶりつきたい欲"をみんなでシェアしよう</h1>
+    <div class="top-content">
+  <%= image_tag("kebab2.jpg", alt: "kebab") %>
+    <h1>"かぶりつきたい欲"をみんなでシェアしよう</h1>
   <h2>kebaboooonは自分が食べたケバブをシェアできるSNSサイトです</h2>
 
-  <%= link_to "早速登録してみる！",signup_path,  class: "btn btn-lg btn-primary" %>
-
+  <%= link_to "早速登録してみる！",signup_path,  class:"btn btn-lg btn-success btn-block"  %>
+ 
 <% end %>   

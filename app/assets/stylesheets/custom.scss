@@ -1,16 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-$color-main: #148B9E;
-$color-back: #DAE6E2;
-$height: 42.5rem;
+
   
 
 body {
  /* 背景色 */
- background-color:#FFEEEE;
+ background-color:#FFCC99;
  
  /* 上からの空白 */
- padding-top: 100px;
+ padding-top: 80px;
 }
 
 section {
@@ -20,6 +18,7 @@ section {
 textarea {
  resize: vertical;
 }
+
 
 /* typography */
 
@@ -55,13 +54,13 @@ p {
  position: relative;
 
  /* 文字の種類 */
- font-family: "游明朝";
+ font-family: "Osaka－等幅";
 
  /* テキスト変換 */
  text-transform: uppercase;
 
  /* 文字の色 */
- color: #EEEEEE;
+ color: 	#0000FF;
 
  /* 中央揃え */
  text-align: center;
@@ -71,7 +70,7 @@ p {
  {
 
    /* 文字の幅 */
-   letter-spacing: 5px;
+   letter-spacing: 3px;
 
    /* 透明度 */
    opacity: 0.8;
@@ -96,7 +95,7 @@ p {
  /* サブタイトル */
  h2{
    /* 文字の色 */
-   color: #AAAAAA;
+   color: #000001;
 
    /* 文字の幅 */
    letter-spacing: 5px;
@@ -108,7 +107,7 @@ p {
    position: absolute;
 
    /* 上からの位置 */
-   top: 70%;
+   top: 50%;
 
    /* 左からの位置 */
    left: 50%;
@@ -195,7 +194,7 @@ header{
    color: #444444;
  
    /* テキスト変換 */
-   text-transform: lowercase;
+   text-transform: capitalize;
    
    /* 文字の幅 */
    letter-spacing: 5px;
