@@ -80,6 +80,14 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+  def search
+    if params[:name].present?
+      @users = User.where('name LIKE ?', "%#{params[:name]}%")
+    else
+      @users = User.none
+    end
+  end
+
   private
 
     def user_params

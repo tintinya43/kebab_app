@@ -21,6 +21,11 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true,
     length: { minimum: 6 }, allow_nil: true
+    
+      #検索機能
+  scope :search_by_keyword, -> (keyword) {
+    where("users.name LIKE :keyword", keyword: "%#{sanitize_sql_like(keyword)}%") if keyword.present?
+  }
 
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
